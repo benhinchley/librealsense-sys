@@ -1,8 +1,9 @@
 [package]
 name = "librealsense-sys"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Benjamin Hinchley <benjaminhinchley@gmail.com>"]
 description = "FFI Bindings to librealsense"
+repository = "https://github.com/benhinchley/librealsense-sys"
 readme = "README.md"
 license = "Apache-2.0"
 license-file = "LICENSE"
