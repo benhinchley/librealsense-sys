@@ -6,7 +6,6 @@ description = "FFI Bindings to librealsense"
 repository = "https://github.com/benhinchley/librealsense-sys"
 readme = "README.md"
 license = "Apache-2.0"
-license-file = "LICENSE"
 build = "build.rs"
 
 [dependencies]
