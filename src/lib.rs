@@ -16,13 +16,13 @@ mod tests {
     use super::*;
 
     #[test]
-    fn list_devices() {
+    fn connected_devices() {
         unsafe {
-            let err = Box::into_raw(Box::new(rs_error::new())) as *mut *mut rs_error;
+            let mut err = Box::into_raw(Box::new(rs_error::new())) as *mut rs_error;
             let api: i32 = RS_API_VERSION as i32;
-            let ctx = rs_create_context(api, err);
-            let num = rs_get_device_count(ctx, err);
-            println!("connected devices: {:?}", num);
+            let ctx = rs_create_context(api, &mut err as *mut _);
+            let num = rs_get_device_count(ctx, &mut err as *mut _);
+            assert!(num >= 0);
         }
     }
 }
